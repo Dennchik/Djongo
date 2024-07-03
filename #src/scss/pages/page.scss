@@ -1,0 +1,71 @@
+.page {
+	// .page__container
+	&__container {
+		// container-type: size;
+	}
+
+	// .page__content
+	&__content {
+		background: $color;
+
+		// @include _max(960px) {
+		// 	border: 1px solid red;
+		// }
+	}
+
+	// .page__header
+	&__header {
+		padding: 2.7rem 2.5rem 15rem 13.5rem;
+
+		@include _690-1920 {
+			padding-left: calc(
+				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
+			);
+		}
+
+		@include _screen-690 {
+			padding-left: 2.7rem;
+			padding-bottom: 48px;
+		}
+
+		@include _screen-375 {
+			padding: 2.7rem 13px 48px;
+		}
+	}
+
+	// .page__main-content
+	&__main-content {
+		padding: 13.3rem 13.5rem 15.3rem;
+		background: #eeeeec;
+		border-radius: 60px;
+
+		@include _690-1920 {
+			padding-left: calc(
+				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
+			);
+
+			padding-right: calc(
+				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
+			);
+		}
+
+		@include _screen-690 {
+			border-radius: 30px;
+			padding-left: 2.7rem;
+			padding-right: 2.7rem;
+		}
+
+		@include _screen-375 {
+			padding: 43px 13px 48px;
+		}
+	}
+
+	// .page__marketing
+	&__marketing {
+		padding-bottom: 15.8rem;
+	}
+
+	// .page__footer
+	&__footer {
+	}
+}

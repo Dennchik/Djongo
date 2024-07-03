@@ -1,0 +1,78 @@
+// -----------------------------------------------------------------------------
+// .card__favourites:not(._like) {
+// 	.icon-heart-like {
+// 		opacity: 0;
+// 	}
+// }
+.side-bar__parent-menu > ._collapse:not(._show) {
+	display: none;
+}
+
+.sub-menu__menu > ._collapse:not(._show) {
+	display: none;
+}
+//*  ------------------------ [Greed Card a] -----------------------------------
+
+// -----------------------------------------------------------------------------
+
+// -----------------------------------------------------------------------------
+.button {
+	border: 1px solid #585856;
+	border-radius: 10px;
+	white-space: nowrap;
+	transition:
+		background-color 0.3s,
+		color 0.3s ease-in-out;
+	font-size: 1.4rem;
+	height: 38px;
+	min-width: 16.5rem;
+
+	&:active {
+		box-shadow: 1px 1px 4px #000;
+	}
+
+	&:hover {
+		box-shadow: 1px 1px 4px #000000a8;
+	}
+
+	&.button--red {
+		color: $bg-color;
+		background: $color;
+		border: none;
+
+		&:active {
+			border: 1px solid #585856;
+			background-color: $bg-color;
+			color: black;
+		}
+
+		&:hover {
+			box-shadow: 1px 1px 4px #000;
+		}
+	}
+}
+
+// -----------------------------------------------------------------------------
+.swiper-wrapper {
+	align-items: flex-start;
+}
+// -----------------------------------------------------------------------------
+._ibg {
+	position: relative;
+	img {
+		position: absolute;
+		top: 0;
+		right: 0;
+		// width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+// -----------------------------------------------------------------------------
+.product-offer {
+	&__title--favourites {
+		display: flex;
+		justify-content: center;
+	}
+}
