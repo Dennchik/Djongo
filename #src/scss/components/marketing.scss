@@ -32,6 +32,35 @@
 
 	// .marketing__row
 	&__row {
+		padding: 13.3rem 13.5rem 15.3rem;
+
+		@include _690-1920 {
+			padding-left: calc(
+				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
+			);
+
+			padding-right: calc(
+				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
+			);
+		}
+
+		@include _screen-375 {
+			padding: 43px 13px 48px;
+		}
+
+		&:nth-child(1) {
+			@include _screen-690 {
+				border-radius: 30px;
+				padding-left: 2.7rem;
+				padding-right: 2.7rem;
+			}
+		}
+		&:nth-child(2) {
+			@include _screen-690 {
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
 	}
 
 	// .marketing__image
@@ -47,7 +76,7 @@
 		}
 
 		img {
-			pointer-events: none;
+			max-width: 100%;
 		}
 	}
 
@@ -57,6 +86,7 @@
 		justify-content: space-between;
 		gap: 20px;
 		align-items: flex-end;
+		margin-bottom: 15.8rem;
 	}
 }
 
@@ -90,7 +120,6 @@
 
 				._icon {
 					font-size: 32px;
-					transform: rotate(-90deg);
 					color: $font-color-secondary;
 				}
 			}
@@ -101,7 +130,14 @@
 			padding: 17px 18px 22px 40px;
 
 			.card__icon {
+				width: 57px;
+				height: 57px;
 				margin-bottom: 27px;
+			}
+
+			._icon {
+				font-size: 57px;
+				color: $color;
 			}
 		}
 
@@ -110,7 +146,13 @@
 			padding: 28px 29px 34px 32px;
 
 			.card__icon {
+				width: 57px;
+				height: 57px;
 				margin-bottom: 56px;
+			}
+			._icon {
+				font-size: 57px;
+				color: $color;
 			}
 		}
 
@@ -169,46 +211,70 @@
 
 .team-lunch {
 	display: flex;
-	gap: 2.4rem;
+	gap: 24px;
+
+	@include _screen-1024 {
+		flex-direction: column;
+	}
 
 	// .team-lunch__image
 	&__image {
 		border-radius: 30px;
-		overflow: hidden;
-		min-height: 100%;
-		flex: 0 1 526px;
+
+		@include _min-1024 {
+			overflow: hidden;
+			min-height: 100%;
+			flex: 0 1 526px;
+			width: 526px;
+		}
 
 		img {
-			// width: 100%;
-			// height: 100%;
-			width: 526px;
-			height: 789px;
+			@include _min-1024 {
+				width: 526px;
+			}
+			width: 100%;
+			height: 100%;
+			min-height: 100%;
 			max-width: 100%;
 			object-fit: cover;
 			object-position: 0 100%;
+			overflow: hidden;
 		}
 	}
 
 	// .team-lunch__info
-
 	&__info {
-		flex: 0 1 1078px;
-		padding: 3rem 10rem 29.7rem 7.9rem;
+		flex: 0 3 1078px;
+		// padding: 3rem 10rem 29.7rem;
+
+		padding: 3rem calc(16px + (100 - 16) * ((100vw - 320px) / (1920 - 320)))
+			29.7rem;
 		border-radius: 30px;
 		background: $color;
+
+		@include _screen-1024 {
+			padding-bottom: 50px;
+		}
+
+		._icon {
+			font-size: 57px;
+			color: $bg-color;
+			@include _screen-1024 {
+				transform: translateX(-45px);
+			}
+		}
 	}
 
 	// .team-lunch__icon
-
 	&__icon {
+		position: relative;
+		right: -100%;
 		width: 45px;
 		height: 56px;
-		border: 1px solid $bg-color;
 		margin-bottom: 10.5rem;
 	}
 
 	// .team-lunch__title
-
 	&__title {
 		margin-bottom: 11px;
 		color: $bg-color;
@@ -225,10 +291,10 @@
 
 	&__text {
 		color: $bg-color;
-		font-size: 2.5rem;
 
 		p {
 			&:nth-child(1) {
+				font-size: 2.5rem;
 				line-height: 120%; /* 30px/25 */
 				margin-bottom: 3.6rem;
 			}
@@ -239,6 +305,14 @@
 
 			&:nth-child(3) {
 				line-height: 120%; /* 30px/25 */
+			}
+
+			&:not(:first-child) {
+				font-size: 16px;
+			}
+
+			&:last-child {
+				margin-bottom: 21px;
 			}
 		}
 	}

@@ -35,28 +35,11 @@
 
 	// .page__main-content
 	&__main-content {
-		padding: 13.3rem 13.5rem 15.3rem;
 		background: #eeeeec;
 		border-radius: 60px;
 
-		@include _690-1920 {
-			padding-left: calc(
-				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
-			);
-
-			padding-right: calc(
-				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
-			);
-		}
-
 		@include _screen-690 {
 			border-radius: 30px;
-			padding-left: 2.7rem;
-			padding-right: 2.7rem;
-		}
-
-		@include _screen-375 {
-			padding: 43px 13px 48px;
 		}
 	}
 

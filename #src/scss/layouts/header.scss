@@ -32,6 +32,9 @@
 		p {
 			&:not(:last-child) {
 				margin-bottom: 45px;
+				@include _screen-490 {
+					margin-bottom: 22px;
+				}
 			}
 		}
 
@@ -70,11 +73,14 @@
 	&__item {
 		position: relative;
 		background: transparent;
+		width: 100%;
 
 		&:nth-child(1) {
 			justify-self: start;
-			max-width: 86rem;
 			z-index: 2;
+			@include _min-1440 {
+				max-width: 86rem;
+			}
 		}
 		&:nth-child(2) {
 			justify-self: end;
@@ -85,7 +91,9 @@
 
 	// .header__title
 	&__title {
-		margin-bottom: 45px;
+		@include _min-1440 {
+			margin-bottom: 45px;
+		}
 
 		h1 {
 			color: $bg-color;
@@ -118,6 +126,12 @@
 		@include _screen-1440 {
 			left: 0;
 			bottom: 0;
+			margin-bottom: 28px;
+		}
+
+		@include _screen-490 {
+			display: flex;
+			justify-content: center;
 		}
 	}
 
@@ -153,24 +167,13 @@
 	// .header__image
 	&__image {
 		width: 100%;
-		min-height: 100%;
-		z-index: 9;
+		text-align: right;
 
 		img {
 			width: 100%;
-		}
-	}
-
-	// .header__fade-in
-	&__fade-in {
-		display: none;
-
-		@include _screen-1440 {
-			display: block;
-		}
-
-		@include _screen-490 {
-			text-align: center;
+			@include _screen-1440 {
+				max-width: 86rem;
+			}
 		}
 	}
 }

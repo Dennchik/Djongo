@@ -1,10 +1,10 @@
 section.marketing.page__marketing
-	._title Корпоративное питание с доставкой
-	._text - ЭТО&nbsp;КОМФОРТ&nbsp;СОТРУДНИКОВ, ПЛЮС К&nbsp;ИМИДЖУ&nbsp;КОМПАНИИ
-	._image 
-		img(src="@@webRoot/img/main/mark-1.png", alt="картинка") 
-	._title Сытые сотрудники повышают показатели:
 	._row
+		._title Корпоративное питание с доставкой
+		._text - ЭТО&nbsp;КОМФОРТ&nbsp;СОТРУДНИКОВ, ПЛЮС К&nbsp;ИМИДЖУ&nbsp;КОМПАНИИ
+		._image 
+			img(src="@@webRoot/img/main/mark-1.png", alt="картинка") 
+		._title Сытые сотрудники повышают показатели:
 		//- .indicators._content
 			._column 
 				.card
@@ -15,18 +15,18 @@ section.marketing.page__marketing
 			._column 
 				.card
 					._icon 
-						+iconfont('arrow-right', '_icon')
+						+iconfont('arrow-up', '_icon')
 					._value 21%
 					._text эффективность&nbsp;труда&nbsp;(КПД) 
 			._column 
 				.card
 					._icon 
-						img(src="@@webRoot/img/main/subtract.png", alt="subtract")
+						+iconfont('smile', '_icon')
 					._text общее&nbsp;настроение&nbsp;в&nbsp;офисе
 			._column 
 				.card
 					._icon 
-						img(src="@@webRoot/img/main/alarm-fill.png", alt="alarm")
+						+iconfont('alarm', '_icon')
 					._text сокращается&nbsp;время&nbsp;от&nbsp;походов в&nbsp;кафе/магазин&nbsp;около
 					._value 30-40
 						span минут
@@ -37,11 +37,11 @@ section.marketing.page__marketing
 						img(src="@@webRoot/img/main/union.png", alt="union")
 	._row
 		.team-lunch
-			._image 
+			._image(data-move-el="[{'bp-max': 1024.98, 'index': 4, 'target': '.bp-3'}]")
 				img(src="@@webRoot/img/main/mark-2.png", alt="картинка") 
-			._info 
+			._info.bp-3
 				._icon
-					
+					+iconfont('thumbs-up', '_icon')
 				._title Корпоративные обеды
 				._text 
 					p - недооцененный инструмент повышения лояльности, сокращения текучки и улучшения взаимоотношений между сотрудниками.

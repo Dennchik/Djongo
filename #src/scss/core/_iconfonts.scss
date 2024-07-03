@@ -27,6 +27,26 @@
   //* Better Font Rendering
 }
 
+.icon-thumbs-up {
+  &:before {
+    content: $icon-thumbs-up;
+  }
+}
+.icon-marks {
+  &:before {
+    content: $icon-marks;
+  }
+}
+.icon-smile {
+  &:before {
+    content: $icon-smile;
+  }
+}
+.icon-alarm {
+  &:before {
+    content: $icon-alarm;
+  }
+}
 .icon-angle-left {
   &:before {
     content: $icon-angle-left;
@@ -37,59 +57,19 @@
     content: $icon-angle-right;
   }
 }
-.icon-star {
-  &:before {
-    content: $icon-star;
-  }
-}
-.icon-star-o {
-  &:before {
-    content: $icon-star-o;
-  }
-}
-.icon-arow-down {
-  &:before {
-    content: $icon-arow-down;
-  }
-}
-.icon-mobile-profile {
-  &:before {
-    content: $icon-mobile-profile;
-  }
-}
-.icon-mobile-catalog {
-  &:before {
-    content: $icon-mobile-catalog;
-  }
-}
 .icon-rub {
   &:before {
     content: $icon-rub;
   }
 }
-.icon-arow-right {
+.icon-arrow-dow {
   &:before {
-    content: $icon-arow-right;
+    content: $icon-arrow-dow;
   }
 }
-.icon-arow-left {
+.icon-arrow-up {
   &:before {
-    content: $icon-arow-left;
-  }
-}
-.icon-whatsapp {
-  &:before {
-    content: $icon-whatsapp;
-  }
-}
-.icon-vk-brand {
-  &:before {
-    content: $icon-vk-brand;
-  }
-}
-.icon-telegram-fly {
-  &:before {
-    content: $icon-telegram-fly;
+    content: $icon-arrow-up;
   }
 }
 .icon-arrow-left {
@@ -102,29 +82,9 @@
     content: $icon-arrow-right;
   }
 }
-.icon-assortment {
+.icon-cancel {
   &:before {
-    content: $icon-assortment;
-  }
-}
-.icon-cart {
-  &:before {
-    content: $icon-cart;
-  }
-}
-.icon-delivery {
-  &:before {
-    content: $icon-delivery;
-  }
-}
-.icon-quality {
-  &:before {
-    content: $icon-quality;
-  }
-}
-.icon-services {
-  &:before {
-    content: $icon-services;
+    content: $icon-cancel;
   }
 }
 .icon-trash {
@@ -132,68 +92,18 @@
     content: $icon-trash;
   }
 }
-.icon-cross-middle {
-  &:before {
-    content: $icon-cross-middle;
-  }
-}
-.icon-cancel {
-  &:before {
-    content: $icon-cancel;
-  }
-}
-.icon-cancel-circle {
-  &:before {
-    content: $icon-cancel-circle;
-  }
-}
-.icon-search {
-  &:before {
-    content: $icon-search;
-  }
-}
 .icon-heart-like {
   &:before {
     content: $icon-heart-like;
   }
 }
-.icon-user-check {
+.icon-shopping-cart {
   &:before {
-    content: $icon-user-check;
-  }
-}
-.icon-catalog {
-  &:before {
-    content: $icon-catalog;
-  }
-}
-.icon-group {
-  &:before {
-    content: $icon-group;
-  }
-}
-.icon-search-doc {
-  &:before {
-    content: $icon-search-doc;
-  }
-}
-.icon-minus {
-  &:before {
-    content: $icon-minus;
-  }
-}
-.icon-plus {
-  &:before {
-    content: $icon-plus;
+    content: $icon-shopping-cart;
   }
 }
 .icon-heart {
   &:before {
     content: $icon-heart;
-  }
-}
-.icon-shopping-cart {
-  &:before {
-    content: $icon-shopping-cart;
   }
 }
