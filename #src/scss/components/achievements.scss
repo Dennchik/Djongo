@@ -1,0 +1,138 @@
+.achievements {
+	// .achievements__content
+	&__content {
+		display: flex;
+		@include _screen-690 {
+			flex-direction: column;
+			padding: 0 10px;
+		}
+	}
+
+	// .achievements__image
+
+	&__image {
+		// border: 1px solid #000;
+		border-radius: 60px;
+		overflow: hidden;
+		flex: 0 1 50%;
+		width: 100%;
+		position: relative;
+		min-height: 100%;
+
+		@include _screen-690 {
+			border-radius: 15px;
+			margin-bottom: 47px;
+		}
+		img {
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// .achievements__label
+	&__label {
+		position: absolute;
+
+		padding: 4px 0px 4px 7px;
+		display: flex;
+		width: 262px;
+		align-items: center;
+		border-radius: 30px;
+		background: $bg-color;
+
+		@include _screen-690 {
+			height: 55px;
+		}
+
+		&:nth-child(2) {
+			top: 18%;
+			left: 12%;
+
+			@include _screen-490 {
+				width: 216px;
+				left: 0;
+				top: 23px;
+			}
+		}
+
+		&:nth-child(3) {
+			right: 27px;
+			bottom: 32px;
+
+			@include _screen-490 {
+				right: 0;
+				bottom: 11px;
+				width: 233px;
+			}
+		}
+
+		span {
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 118.75%; /* 19px/16 */
+
+			@include _screen-690 {
+				font-size: 14px;
+				font-weight: 400;
+				line-height: 121.428571%; /* 17px/14 */
+			}
+		}
+		.icon-subtract {
+			margin-right: 14px;
+			color: $font-color-secondary;
+			font-size: 57px;
+
+			@include _screen-690 {
+				margin-right: 9px;
+				font-size: 46px;
+			}
+		}
+	}
+
+	// .achievements__info
+	&__info {
+		flex: 0 1 50%;
+		padding-left: 8rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		@include _690-1920 {
+			padding-left: calc(0px + (80 - 0) * ((100vw - 690px) / (1920 - 690)));
+		}
+		@include _screen-690 {
+			padding: 0;
+		}
+	}
+
+	// .achievements__title
+
+	&__title {
+		margin-bottom: 20px;
+		color: $font-color-secondary;
+		font-size: 6.4rem;
+		font-weight: 700;
+		line-height: 120.3125%; /* 77px/64 */
+		@include _320-1920 {
+			font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include _screen-690 {
+			text-align: center;
+		}
+	}
+
+	// .achievements__text
+
+	&__text {
+		p {
+			&:not(:last-child) {
+				margin-bottom: 25px;
+
+				@include _screen-690 {
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+}

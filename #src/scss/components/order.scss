@@ -1,0 +1,59 @@
+.ordeer {
+	// .ordeer__body
+	&__body {
+		width: 100%;
+		padding: 13.5rem 2rem 15.2rem;
+		border-radius: 30px;
+		background: $color;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include _screen-690 {
+			border-radius: 15px;
+			padding: 47px 2rem 51px;
+		}
+	}
+
+	// .ordeer__title
+	&__title {
+		margin-bottom: 24px;
+		color: $bg-color;
+		font-size: 64px;
+		font-weight: 700;
+		line-height: 120.3125%; /* 77px/64 */
+
+		@include _screen-1920 {
+			font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include _screen-690 {
+			margin-bottom: 19px;
+		}
+	}
+
+	// .ordeer__text
+	&__text {
+		margin-bottom: 47px;
+		color: $bg-color;
+		font-size: 25px;
+		font-weight: 400;
+		max-width: 109.8rem;
+		line-height: 120%; /* 30px/25 */
+
+		@include _screen-1920 {
+			font-size: calc(14px + (25 - 22) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include _screen-690 {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .ordeer__buttoms
+	&__buttoms {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+	}
+}

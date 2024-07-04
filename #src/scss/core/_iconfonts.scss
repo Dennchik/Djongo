@@ -26,7 +26,11 @@
   font-variant-ligatures: discretionary-ligatures;
   //* Better Font Rendering
 }
-
+.icon-check-circle {
+  &:before {
+    content: $icon-check-circle;
+  }
+}
 .icon-thumbs-up {
   &:before {
     content: $icon-thumbs-up;

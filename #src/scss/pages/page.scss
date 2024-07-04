@@ -38,14 +38,59 @@
 		background: #eeeeec;
 		border-radius: 60px;
 
+		padding: 0 13.5rem;
+
 		@include _screen-690 {
 			border-radius: 30px;
+			padding: 0;
+		}
+
+		@include _690-1920 {
+			padding-left: calc(0rem + (135 - 1) * ((100vw - 690px) / (1920 - 690)));
+
+			padding-right: calc(0rem + (135 - 1) * ((100vw - 690px) / (1920 - 690)));
 		}
 	}
 
 	// .page__marketing
 	&__marketing {
 		padding-bottom: 15.8rem;
+
+		@include _screen-690 {
+			padding-bottom: 44px;
+		}
+	}
+
+	// .page__consumers
+	&__consumers {
+		padding-bottom: 15.8rem;
+		@include _screen-690 {
+			padding-bottom: 46px;
+		}
+	}
+
+	// .page__achievements
+	&__achievements {
+		padding-bottom: 15.8rem;
+		@include _screen-690 {
+			padding-bottom: 46px;
+		}
+	}
+
+	// ..page__assortment
+	&__assortment {
+		padding-bottom: 15.8rem;
+		@include _screen-690 {
+			padding-bottom: 51px;
+		}
+	}
+
+	// .page__ordeer
+	&__ordeer {
+		padding-bottom: 15.8rem;
+		@include _screen-690 {
+			padding-bottom: 46px;
+		}
 	}
 
 	// .page__footer

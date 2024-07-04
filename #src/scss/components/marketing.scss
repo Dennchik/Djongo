@@ -9,6 +9,9 @@
 
 		&:not(:first-child) {
 			margin-bottom: 6.9rem;
+			@include _screen-690 {
+				margin-bottom: 20px;
+			}
 		}
 
 		@include _320-1920 {
@@ -24,7 +27,7 @@
 		text-align: center;
 		text-transform: lowercase;
 
-		@include _screen-490 {
+		@include _screen-690 {
 			font-size: 16px;
 			margin-bottom: 15px;
 		}
@@ -32,29 +35,29 @@
 
 	// .marketing__row
 	&__row {
-		padding: 13.3rem 13.5rem 15.3rem;
+		&:not(:last-child) {
+			margin-bottom: 13.2rem;
 
-		@include _690-1920 {
-			padding-left: calc(
-				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
-			);
-
-			padding-right: calc(
-				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
-			);
-		}
-
-		@include _screen-375 {
-			padding: 43px 13px 48px;
+			@include _screen-690 {
+				margin-bottom: 50px;
+			}
 		}
 
 		&:nth-child(1) {
+			padding-top: 13.3rem;
 			@include _screen-690 {
 				border-radius: 30px;
 				padding-left: 2.7rem;
 				padding-right: 2.7rem;
+				padding-top: 43px;
+			}
+
+			@include _screen-490 {
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 		}
+
 		&:nth-child(2) {
 			@include _screen-690 {
 				padding-left: 0;
@@ -82,19 +85,26 @@
 
 	// .marketing__content
 	&__content {
-		display: flex;
-		justify-content: space-between;
-		gap: 20px;
-		align-items: flex-end;
-		margin-bottom: 15.8rem;
+		overflow-x: auto;
 	}
 }
 
 .indicators {
+	// .indicators__scroll
+	&__scroll {
+		@include _min-690 {
+			display: flex;
+			justify-content: space-between;
+			gap: 20px;
+			align-items: flex-end;
+		}
+	}
+
 	// .indicators__column
 	&__column {
 		border-radius: 30px;
 		display: flex;
+		min-width: 310px;
 
 		flex: 0 1 310px;
 		max-width: 310px;
@@ -165,9 +175,18 @@
 			.card__image {
 				display: flex;
 				justify-content: center;
-				margin-bottom: 10px;
+				margin-bottom: 14px;
 			}
 			background: #bbd8e8;
+		}
+
+		@include _screen-690 {
+			width: 100%;
+			max-width: 100%;
+
+			&:not(:last-child) {
+				margin-bottom: 15px;
+			}
 		}
 	}
 
@@ -198,6 +217,11 @@
 			font-weight: 400;
 			line-height: 118%; /* 19px/16 */
 		}
+	}
+
+	// .card__imge
+	&__image {
+		text-align: center;
 	}
 
 	// .card__icon
@@ -245,33 +269,44 @@
 	// .team-lunch__info
 	&__info {
 		flex: 0 3 1078px;
-		// padding: 3rem 10rem 29.7rem;
-
-		padding: 3rem calc(16px + (100 - 16) * ((100vw - 320px) / (1920 - 320)))
-			29.7rem;
+		padding: 3rem 67px 29.7rem;
 		border-radius: 30px;
 		background: $color;
+
+		@include _screen-1920 {
+			padding: 3rem calc(10px + (67 - 10) * ((100vw - 320px) / (1920 - 320)))
+				29.7rem;
+		}
 
 		@include _screen-1024 {
 			padding-bottom: 50px;
 		}
 
+		@include _screen-690 {
+			padding-top: 45px;
+		}
+
 		._icon {
-			font-size: 57px;
+			display: inline-block;
+			width: 45px;
+			height: 56px;
+			font-size: 50px;
 			color: $bg-color;
-			@include _screen-1024 {
-				transform: translateX(-45px);
-			}
 		}
 	}
 
 	// .team-lunch__icon
 	&__icon {
-		position: relative;
-		right: -100%;
-		width: 45px;
-		height: 56px;
+		@include _screen-690 {
+			display: none;
+		}
+		width: 100%;
 		margin-bottom: 10.5rem;
+		text-align-last: right;
+
+		@include _screen-1024 {
+			// transform: translateX(-45px);
+		}
 	}
 
 	// .team-lunch__title
@@ -288,7 +323,6 @@
 	}
 
 	// .team-lunch__text
-
 	&__text {
 		color: $bg-color;
 
@@ -311,8 +345,10 @@
 				font-size: 16px;
 			}
 
-			&:last-child {
-				margin-bottom: 21px;
+			@include _screen-1024 {
+				&:last-child {
+					margin-bottom: 20px;
+				}
 			}
 		}
 	}
