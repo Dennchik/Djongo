@@ -14,7 +14,9 @@
 
 	// .footer__column
 	&__column {
-		flex: 0 1 742px;
+		@include _min-960 {
+			flex: 0 1 742px;
+		}
 
 		h2 {
 			color: rgb(255, 255, 255);
@@ -122,7 +124,7 @@
 				text-align: center;
 			}
 			@include _screen-690 {
-				font-size: 16px;
+				font-size: 15px;
 			}
 		}
 	}
