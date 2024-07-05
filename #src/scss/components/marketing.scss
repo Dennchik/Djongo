@@ -15,7 +15,12 @@
 		}
 
 		@include _320-1920 {
-			font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(24px + (64 - 24) * ((100vw - 320px) / (1920 - 320)));
+		}
+
+		@include _screen-320 {
+			font-size: 24px;
+			line-height: 107.47%;
 		}
 	}
 
@@ -85,7 +90,19 @@
 
 	// .marketing__content
 	&__content {
-		overflow-x: auto;
+		width: 100%;
+		overflow-x: scroll;
+		&::-webkit-scrollbar-track {
+			background: $color;
+			background: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			border: none;
+			border-radius: 0;
+			background-color: transparent;
+			background-image: -webkit-linear-gradient(transparent);
+		}
 	}
 }
 
@@ -97,6 +114,12 @@
 			justify-content: space-between;
 			gap: 20px;
 			align-items: flex-end;
+			overflow: scroll;
+		}
+
+		&::-webkit-scrollbar {
+			// width: 110%;
+			height: 2px;
 		}
 	}
 
@@ -104,10 +127,10 @@
 	&__column {
 		border-radius: 30px;
 		display: flex;
-		min-width: 310px;
 
 		flex: 0 1 310px;
 		max-width: 310px;
+		min-width: 290px;
 
 		&:nth-child(1) {
 			padding: 49px 33px 25px 27px;

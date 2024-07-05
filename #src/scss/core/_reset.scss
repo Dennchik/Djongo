@@ -37,7 +37,7 @@ body {
 	margin: 0px;
 	border: none;
 	box-sizing: border-box;
-	scrollbar-width: none;
+	// scrollbar-width: thin;
 }
 
 *,
@@ -164,7 +164,9 @@ h6 {
 // * Изменить стиль полосы прокрутки (scrollbar)
 ::-webkit-scrollbar {
 	width: 0.5rem;
+	height: 0.3rem;
 	padding: 0.031em;
+	cursor: grab;
 }
 
 ::-webkit-scrollbar-track {
@@ -189,6 +191,7 @@ h6 {
 }
 
 ::-webkit-scrollbar-thumb:hover {
+	cursor: grab;
 	background-color: var(--background-thumb);
 	background-image: -webkit-linear-gradient(
 		45deg,

@@ -113,12 +113,18 @@
 		font-size: 6.4rem;
 		font-weight: 700;
 		line-height: 120.3125%; /* 77px/64 */
+
 		@include _320-1920 {
-			font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(24px + (64 - 24) * ((100vw - 320px) / (1920 - 320)));
 		}
 
 		@include _screen-690 {
 			text-align: center;
+		}
+
+		@include _screen-320 {
+			font-size: 24px;
+			line-height: 107.47%;
 		}
 	}
 

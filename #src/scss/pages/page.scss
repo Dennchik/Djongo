@@ -88,12 +88,60 @@
 	// .page__ordeer
 	&__ordeer {
 		padding-bottom: 15.8rem;
+
 		@include _screen-690 {
 			padding-bottom: 46px;
 		}
 	}
 
+	// .page__delivery
+	&__delivery {
+		padding-bottom: 15.8rem;
+
+		@include _screen-690 {
+			padding-bottom: 46px;
+		}
+	}
+
+	// .page__services
+	&__services {
+		padding-bottom: 15.8rem;
+
+		@include _screen-690 {
+			padding-bottom: 51px;
+		}
+	}
+
+	// .page__helper
+	&__helper {
+		padding-bottom: 15.8rem;
+
+		@include _screen-690 {
+			padding-bottom: 46px;
+		}
+	}
+
+	// .page__reviews
+	&__reviews {
+		padding-bottom: 15.8rem;
+
+		@include _screen-690 {
+			padding-bottom: 51px;
+		}
+	}
+
 	// .page__footer
 	&__footer {
+		padding: 13.7rem 12.3rem 13.5rem 14.9rem;
+		@include _690-1920 {
+			padding-left: calc(0rem + (137 - 1) * ((100vw - 690px) / (1920 - 690)));
+
+			padding-right: calc(0rem + (135 - 1) * ((100vw - 690px) / (1920 - 690)));
+		}
+
+		@include _screen-690 {
+			padding-bottom: 53px;
+			padding: 41px 16px;
+		}
 	}
 }
