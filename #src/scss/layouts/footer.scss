@@ -172,10 +172,8 @@
 	&__developer {
 		padding-top: 10px;
 		display: flex;
-		@include _screen-960 {
-			justify-content: center;
-			text-align: center;
-		}
+		justify-content: center;
+		text-align: center;
 	}
 	&__logo {
 		display: flex;
