@@ -44,9 +44,10 @@
 		font-weight: 400;
 		max-width: 109.8rem;
 		line-height: 120%; /* 30px/25 */
+		text-align: center;
 
 		@include _screen-1920 {
-			font-size: calc(14px + (25 - 22) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(14px + (25 - 14) * ((100vw - 320px) / (1920 - 320)));
 		}
 
 		@include _screen-690 {

@@ -90,126 +90,207 @@
 
 	// .marketing__content
 	&__content {
-		width: 100%;
-		overflow-x: scroll;
-		&::-webkit-scrollbar-track {
-			background: $color;
-			background: transparent;
+		@include _screen-960 {
+			width: 100%;
+			display: flex;
+			gap: 20px;
 		}
 
-		&::-webkit-scrollbar-thumb {
-			border: none;
-			border-radius: 0;
-			background-color: transparent;
-			background-image: -webkit-linear-gradient(transparent);
+		@include _screen-690 {
+			flex-direction: column;
 		}
 	}
 }
 
 .indicators {
-	// .indicators__scroll
-	&__scroll {
-		@include _min-690 {
-			display: flex;
+	// .delivery__row
+	&__row {
+		display: flex;
+		gap: 20px;
+		@include _min-1740 {
 			justify-content: space-between;
-			gap: 20px;
-			align-items: flex-end;
-			overflow: scroll;
 		}
 
-		&::-webkit-scrollbar {
-			// width: 110%;
-			height: 2px;
+		@include _screen-1740 {
+			justify-content: space-evenly;
+		}
+
+		@include _screen-960 {
+			flex: 50%;
+			flex-direction: column;
+		}
+
+		.indicators__column {
+			&:nth-child(1) {
+				background: #dae8e9;
+
+				.card__text {
+					margin-bottom: 10px;
+				}
+			}
+
+			&:nth-child(2) {
+				align-self: end;
+				background: #bbd8e8;
+
+				@include _min-1740 {
+					background: #c2deea;
+
+					.card__value {
+						margin-bottom: 6.55px;
+					}
+
+					.card__icon {
+						margin-bottom: 85px;
+					}
+				}
+
+				@include _screen-1740 {
+					.card__text {
+						margin-bottom: 40px;
+					}
+
+					.card__image {
+						display: flex;
+						justify-content: center;
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				background: #f5f5f3;
+
+				align-self: end;
+			}
+
+			&:nth-child(4) {
+				align-self: end;
+				background: #dce7ec;
+			}
+
+			&:nth-child(5) {
+				.card__text {
+					margin-bottom: 40px;
+				}
+
+				.card__image {
+					display: flex;
+					justify-content: center;
+				}
+				background: #bbd8e8;
+			}
+
+			@include _screen-690 {
+				width: 100%;
+				max-width: 100%;
+
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
+		}
+	}
+
+	// .delivery__row-faidin
+	&__row-faidin {
+		margin-top: 20px;
+		display: flex;
+		gap: 20px;
+		justify-content: space-evenly;
+
+		@include _min-1740 {
+			display: none;
+		}
+
+		@include _screen-960 {
+			flex: 50%;
+			margin-top: 0;
+			flex-direction: column;
+		}
+
+		.indicators__column {
+			&:nth-child(1) {
+				background: #c2deea;
+
+				.card__value {
+					margin-bottom: 6.55px;
+				}
+
+				.card__icon {
+					margin-bottom: 85px;
+				}
+				@include _screen-690 {
+					.card {
+						&__icon {
+							margin-bottom: 0;
+							right: 0;
+							transform: translateX(0);
+						}
+
+						&__value {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+						}
+
+						&__text {
+							margin-right: 30px;
+						}
+					}
+				}
+			}
+
+			&:nth-child(2) {
+				background: #f5f5f3;
+				align-self: end;
+
+				@include _screen-690 {
+					.card {
+						flex-direction: row-reverse;
+						justify-content: space-between;
+						align-items: center;
+
+						&__icon {
+							right: 0;
+							transform: translateX(0);
+							margin-bottom: 0;
+						}
+
+						&__text {
+							margin-right: 30px;
+						}
+					}
+				}
+			}
+
+			&:nth-child(3) {
+				background: #dce7ec;
+			}
+
+			&:nth-child(4) {
+				align-self: end;
+				background: #bbd8e8;
+			}
 		}
 	}
 
 	// .indicators__column
 	&__column {
+		padding: 25px;
 		border-radius: 30px;
-		display: flex;
-
 		flex: 0 1 310px;
-		max-width: 310px;
-		min-width: 290px;
+		min-width: 280px;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
 
-		&:nth-child(1) {
-			padding: 49px 33px 25px 27px;
-			background: #dae8e9;
+		@include _screen-490 {
+			padding-right: 14px;
 		}
 
-		&:nth-child(2) {
-			padding: 25px 23px 22px 29px;
-			background: #c2deea;
-
-			.card__value {
-				margin-bottom: 6.55px;
-			}
-			.card__icon {
-				margin-bottom: 85px;
-				width: 57px;
-				height: 57px;
-				border-radius: 50%;
-				background: #fff;
-
-				._icon {
-					font-size: 32px;
-					color: $font-color-secondary;
-				}
-			}
-		}
-
-		&:nth-child(3) {
-			background: #f5f5f3;
-			padding: 17px 18px 22px 40px;
-
-			.card__icon {
-				width: 57px;
-				height: 57px;
-				margin-bottom: 27px;
-			}
-
-			._icon {
-				font-size: 57px;
-				color: $color;
-			}
-		}
-
-		&:nth-child(4) {
-			background: #dce7ec;
-			padding: 28px 29px 34px 32px;
-
-			.card__icon {
-				width: 57px;
-				height: 57px;
-				margin-bottom: 56px;
-			}
-			._icon {
-				font-size: 57px;
-				color: $color;
-			}
-		}
-
-		&:nth-child(5) {
-			padding: 24px 0 26px;
-			.card__text {
-				margin: 0 56px 40px 35px;
-			}
-
-			.card__image {
-				display: flex;
-				justify-content: center;
-				margin-bottom: 14px;
-			}
-			background: #bbd8e8;
-		}
-
-		@include _screen-690 {
-			width: 100%;
-			max-width: 100%;
-
-			&:not(:last-child) {
-				margin-bottom: 15px;
-			}
+		@include _screen-960 {
+			flex: 0 1 auto;
+			height: 100%;
 		}
 	}
 
@@ -220,7 +301,11 @@
 }
 
 .card {
+	height: 100%;
 	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 
 	// .card__text
 	&__text {
@@ -229,6 +314,7 @@
 
 	// .card__value
 	&__value {
+		white-space: nowrap;
 		color: $font-color-secondary;
 		font-size: 64px;
 		font-weight: 400;
@@ -236,7 +322,7 @@
 		letter-spacing: 0%;
 
 		span {
-			font-size: 1.6rem;
+			font-size: 16px;
 			font-weight: 400;
 			line-height: 118%; /* 19px/16 */
 		}
@@ -249,10 +335,32 @@
 
 	// .card__icon
 	&__icon {
+		width: 57px;
+		height: 57px;
+		margin-bottom: 37px;
+
 		position: relative;
 		right: -100%;
 		transform: translateX(-57px);
 		text-align: left;
+
+		.icon-smile {
+			font-size: 57px;
+			color: $color;
+		}
+
+		.icon-alarm {
+			font-size: 57px;
+			color: $color;
+		}
+
+		.icon-arrow-up {
+			margin-bottom: 85px;
+			border-radius: 50%;
+			background: #fff;
+			font-size: 32px;
+			color: $font-color-secondary;
+		}
 	}
 }
 
@@ -350,8 +458,8 @@
 		color: $bg-color;
 
 		p {
+			font-size: 2.5rem;
 			&:nth-child(1) {
-				font-size: 2.5rem;
 				line-height: 120%; /* 30px/25 */
 				margin-bottom: 3.6rem;
 			}
@@ -364,8 +472,8 @@
 				line-height: 120%; /* 30px/25 */
 			}
 
-			&:not(:first-child) {
-				font-size: 16px;
+			@include _screen-425 {
+				font-size: 14px;
 			}
 
 			@include _screen-1024 {

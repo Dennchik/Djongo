@@ -11,61 +11,6 @@
 		font-style: #{$style};
 	}
 }
-
-@mixin flex-align-center {
-	display: flex;
-	align-items: center;
-}
-
-@mixin flex-align-end {
-	display: flex;
-	align-items: end;
-}
-
-@mixin flex-justify-center {
-	display: flex;
-	justify-content: center;
-}
-
-@mixin flex-align-center-justify-end {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-}
-
-@mixin flex-align-center-justify-start {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-}
-
-@mixin flex-justify-space-between {
-	display: flex;
-	justify-content: space-between;
-}
-
-@mixin flex-justify-space-evenly {
-	display: flex;
-	justify-content: space-evenly;
-}
-
-@mixin flex-align-center-justify-center {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-@mixin flex-align-center-justify-space-evenly {
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-}
-
-@mixin flex-align-center-justify-space-between {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
 // -----------------------------------------------------------------------------
 @mixin _screen-1920 {
 	@media screen and (max-width: 1920px) {
@@ -136,7 +81,18 @@
 		@content;
 	}
 }
+@mixin _screen-1740 {
+	@media screen and (max-width: 1740px) {
+		@content;
+	}
+}
+
 // -----------------------------------------------------------------------------
+@mixin _min-1740 {
+	@media (min-width: 1740.99px) {
+		@content;
+	}
+}
 @mixin _min-1440 {
 	@media (min-width: 1440.99px) {
 		@content;
@@ -199,6 +155,11 @@
 	}
 }
 // -----------------------------------------------------------------------------
+@mixin _1140-1920 {
+	@media (min-width: 1140.98px) and (max-width: 1920px) {
+		@content;
+	}
+}
 @mixin _1024-1920 {
 	@media (min-width: 1024.98px) and (max-width: 1920px) {
 		@content;

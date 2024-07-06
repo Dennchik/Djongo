@@ -75,25 +75,31 @@
 }
 
 .user-reviews {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
 	// .user-reviews__header
 	&__header {
+		flex: 1 1 auto;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		margin-bottom: 20px;
+		@include _screen-690 {
+			align-items: flex-end;
+		}
 	}
 
 	// .user-reviews__name
 	&__name {
-		margin-bottom: 20px;
+		margin-right: 10px;
 		font-size: 2.5rem;
 		font-weight: 400;
-		line-height: 30px;
-		letter-spacing: 0%;
-		text-align: left;
+		line-height: 120%; /* 30px/25 */
 
 		@include _screen-690 {
 			font-size: 15px;
-			margin-bottom: 10px;
 		}
 	}
 
@@ -102,7 +108,7 @@
 	&__icon {
 		.icon-marks {
 			color: $color;
-			font-size: 20px;
+			font-size: 35px;
 		}
 	}
 

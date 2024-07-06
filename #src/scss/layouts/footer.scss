@@ -94,7 +94,7 @@
 
 	// .footer__info
 	&__info {
-		margin-bottom: 20px;
+		margin-bottom: 27px;
 		@include _screen-960 {
 			display: flex;
 			flex-direction: column;
@@ -152,18 +152,18 @@
 	}
 
 	&__faid-in {
+		@include _min-960 {
+			display: none;
+		}
 		display: flex;
 		justify-content: center;
+		margin-bottom: 15px;
 	}
 
 	// .footer__map
 	&__map {
 		max-width: 742px;
 		height: 100%;
-
-		@include _screen-960 {
-			margin: 9px 0 15px;
-		}
 
 		img {
 			width: 100%;
@@ -174,10 +174,13 @@
 
 	&__developer {
 		padding-top: 10px;
-		display: flex;
-		justify-content: center;
-		text-align: center;
+		@include _screen-960 {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+		}
 	}
+
 	&__logo {
 		display: flex;
 		align-items: center;
