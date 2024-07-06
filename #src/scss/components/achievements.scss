@@ -9,7 +9,6 @@
 	}
 
 	// .achievements__image
-
 	&__image {
 		// border: 1px solid #000;
 		border-radius: 60px;
@@ -112,7 +111,7 @@
 		color: $font-color-secondary;
 		font-size: 6.4rem;
 		font-weight: 700;
-		line-height: 120.3125%; /* 77px/64 */
+		line-height: 107.5%;
 
 		@include _320-1920 {
 			font-size: calc(24px + (64 - 24) * ((100vw - 320px) / (1920 - 320)));

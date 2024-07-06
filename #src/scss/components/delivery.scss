@@ -25,7 +25,7 @@
 		color: $font-color-secondary;
 		font-size: 6.4rem;
 		font-weight: 700;
-		line-height: 120.3125%; /* 77px/64 */
+		line-height: 107.5%;
 
 		@include _320-1920 {
 			font-size: calc(22px + (64 - 22) * ((100vw - 320px) / (1920 - 320)));
@@ -56,7 +56,6 @@
 	// .delivery__conttent
 	&__content {
 		display: flex;
-		// align-items: center;
 		margin-bottom: 5.7rem;
 		gap: 8.3rem;
 		@include _screen-1920 {
@@ -170,15 +169,27 @@
 		display: flex;
 		justify-content: center;
 		width: 100%;
-		padding: 1.8rem 0;
 		box-sizing: border-box;
 		border: 3px solid $color;
 		border-radius: 3rem;
-
 		font-size: 2.5rem;
 		font-weight: 400;
 		line-height: 120%; /* 30px/25 */
 		text-align: center;
+		transition:
+			background 0.3s,
+			color 0.3s ease-in-out;
+		a {
+			display: block;
+			padding: 1.8rem 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:hover {
+			background: $color;
+			color: $bg-color;
+		}
 
 		@include _screen-690 {
 			font-size: 14px;

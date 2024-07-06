@@ -113,7 +113,7 @@
 			color: $bg-color;
 			font-size: 96px;
 			font-weight: 700;
-			line-height: 120.833333%; /* 116px/96 */
+			line-height: 107.5%;
 
 			@include _320-1920 {
 				font-size: calc(36px + (96 - 36) * ((100vw - 320px) / (1920 - 320)));
