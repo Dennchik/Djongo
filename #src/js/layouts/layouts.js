@@ -11,6 +11,7 @@ export function modalRequest() {
 	buttonRequests.forEach(buttonRequest => {
 		buttonRequest.addEventListener('click', (e) => {
 			requestPage.classList.add('_show');
+			document.body.classList.add('no-scroll');
 		});
 		//* ------------------------------------------------------------------------
 
@@ -20,6 +21,7 @@ export function modalRequest() {
 	});
 	closeButton.addEventListener('click', () => {
 		requestPage.classList.remove('_show');
+		document.body.classList.remove('no-scroll');
 	});
 
 }

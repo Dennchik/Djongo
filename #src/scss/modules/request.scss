@@ -1,6 +1,5 @@
 .request-page {
 	width: 100%;
-	height: 100%;
 
 	@include _screen-1140 {
 		width: auto;
@@ -8,13 +7,16 @@
 
 	// .request-page__content
 	&__content {
+		// height: 100%;
+	}
+
+	// .request-page__body
+	&__body {
 		display: flex;
 		justify-content: space-evenly;
 		width: 100%;
-		height: 100%;
 		gap: 3rem;
-		overflow-x: hidden;
-		padding: 50px 0;
+		margin: 50px 0;
 
 		@include _screen-1140 {
 			flex-direction: column-reverse;
@@ -23,12 +25,6 @@
 
 	// .request-page__column
 	&__column {
-		.show-cookie {
-			// display: block;
-			&._hide {
-				display: none;
-			}
-		}
 	}
 
 	// .request-page__form
@@ -75,7 +71,7 @@
 		text-align: center;
 
 		@include _320-1920 {
-			font-size: calc(36px + (96 - 36) * ((100vw - 320px) / (1920 - 320)));
+			font-size: calc(36px + (64 - 36) * ((100vw - 320px) / (1920 - 320)));
 		}
 
 		@include _screen-425 {
