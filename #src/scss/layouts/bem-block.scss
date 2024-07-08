@@ -1,19 +1,4 @@
 // -----------------------------------------------------------------------------
-// .card__favourites:not(._like) {
-// 	.icon-heart-like {
-// 		opacity: 0;
-// 	}
-// }
-.side-bar__parent-menu > ._collapse:not(._show) {
-	display: none;
-}
-
-.sub-menu__menu > ._collapse:not(._show) {
-	display: none;
-}
-//*  ------------------------ [Greed Card a] -----------------------------------
-
-// -----------------------------------------------------------------------------
 .ordeer-button {
 	// .ordeer-button__button
 	&__button {

@@ -34,10 +34,10 @@
 
 .gradient-preloader,
 .preloader {
-  background: -webkit-gradient(linear, left top, right top, color-stop(-23.739%, #a83434), color-stop(96.778%, #ea8e7f));
-  background: -webkit-linear-gradient(left, #a83434 -23.739%, #ea8e7f 96.778%);
-  background: -o-linear-gradient(left, #a83434 -23.739%, #ea8e7f 96.778%);
-  background: linear-gradient(90deg, #a83434 -23.739%, #ea8e7f 96.778%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(-23.739%, #6a98b9), color-stop(96.778%, #0e4264));
+  background: -webkit-linear-gradient(left, #6a98b9 -23.739%, #0e4264 96.778%);
+  background: -o-linear-gradient(left, #6a98b9 -23.739%, #0e4264 96.778%);
+  background: linear-gradient(90deg, #6a98b9 -23.739%, #0e4264 96.778%);
 }
 
 html {
@@ -356,14 +356,6 @@ h6 {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-.side-bar__parent-menu > ._collapse:not(._show) {
-  display: none;
-}
-
-.sub-menu__menu > ._collapse:not(._show) {
-  display: none;
 }
 
 .ordeer-button__button {
