@@ -4,3 +4,5 @@ loaded('.preloader');
 import { dinamicAdaptive } from './assets/move-elements.js';
 dinamicAdaptive();
 //* ----------------------------------------------------------------------------
+import { modalRequest } from "./layouts/layouts.js";
+modalRequest();

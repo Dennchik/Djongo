@@ -6,9 +6,17 @@
 		display: flex;
 		justify-content: space-between;
 
+		padding: 0 13.5rem;
+		@include _690-1920 {
+			padding: 0 calc(15px + (135 - 15) * ((100vw - 690px) / (1920 - 690)));
+		}
+
 		@include _screen-1140 {
 			margin-bottom: calc(10px + (90 - 10) * ((100vw - 320px) / (1920 - 320)));
-			padding-right: calc(0px + (13.5 - 0) * ((100vw - 320px) / (1140 - 320)));
+		}
+
+		@include _screen-690 {
+			padding: 0 2.7rem;
 		}
 
 		@include _screen-490 {
@@ -66,13 +74,19 @@
 
 	// .header__contaet
 	&__content {
+		// border: 1px solid #000;
+		padding: 0 25px 0 13.5rem;
 		position: relative;
 		display: grid;
 		gap: 10px;
 		grid-template-columns: repeat(2, 1fr);
 
+		@include _690-1920 {
+			padding-left: calc(15px + (135 - 15) * ((100vw - 690px) / (1920 - 690)));
+		}
 		@include _screen-960 {
 			gap: 0;
+			padding: 0 10px;
 			grid-template-columns: 1fr;
 		}
 	}
@@ -132,6 +146,7 @@
 
 	// .header__buttoms
 	&__buttoms {
+		cursor: pointer;
 		display: inline-flex;
 		align-items: center;
 

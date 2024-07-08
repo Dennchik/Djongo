@@ -1,9 +1,4 @@
 .page {
-	// .page__container
-	&__container {
-		// container-type: size;
-	}
-
 	// .page__content
 	&__content {
 		background: $color;
@@ -15,21 +10,15 @@
 
 	// .page__header
 	&__header {
-		padding: 2.7rem 2.5rem 15rem 13.5rem;
-
-		@include _690-1920 {
-			padding-left: calc(
-				2.7rem + (135 - 27) * ((100vw - 690px) / (1920 - 690))
-			);
-		}
+		padding: 2.7rem 0 15rem;
 
 		@include _screen-690 {
-			padding-left: 2.7rem;
+			padding-right: 0;
 			padding-bottom: 48px;
 		}
 
 		@include _screen-375 {
-			padding: 2.7rem 13px 48px;
+			// padding: 2.7rem 13px 48px;
 		}
 	}
 
@@ -45,9 +34,7 @@
 		}
 
 		@include _690-1920 {
-			padding-left: calc(0rem + (135 - 1) * ((100vw - 690px) / (1920 - 690)));
-
-			padding-right: calc(0rem + (135 - 1) * ((100vw - 690px) / (1920 - 690)));
+			padding: calc(15px + (135 - 15) * ((100vw - 690px) / (1920 - 690)));
 		}
 	}
 
@@ -131,16 +118,39 @@
 
 	// .page__footer
 	&__footer {
-		padding: 13.7rem 12.3rem 13.5rem 14.9rem;
+		padding: 13.7rem 13.5rem 13.5rem;
 		@include _690-1920 {
-			padding-left: calc(0rem + (137 - 1) * ((100vw - 690px) / (1920 - 690)));
+			padding-left: calc(0rem + (135 - 0) * ((100vw - 690px) / (1920 - 690)));
 
-			padding-right: calc(0rem + (135 - 1) * ((100vw - 690px) / (1920 - 690)));
+			padding-right: calc(0rem + (135 - 0) * ((100vw - 690px) / (1920 - 690)));
 		}
 
 		@include _screen-690 {
 			padding-bottom: 53px;
 			padding: 41px 16px;
+		}
+	}
+
+	// .page__request
+	&__request {
+		position: fixed;
+		display: block;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 1000;
+		background: rgba(65, 65, 65, 0.966);
+		opacity: 0;
+		pointer-events: none;
+		transition: all 0.4s ease-in-out;
+
+		&._show {
+			pointer-events: all;
+			opacity: 1;
 		}
 	}
 }

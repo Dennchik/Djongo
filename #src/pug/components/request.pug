@@ -1,0 +1,34 @@
+.request-page
+	._content
+		._column.show-cookie
+			.info
+				._title Мы используем cookie. 
+				._text 
+					p Это позволяет нам анализировать взаимодействие посетителей с&nbsp;сайтом и&nbsp;делать его лучше. 
+					p Продолжая пользоваться сайтом, вы соглашаетесь с&nbsp;использованием файлов cookie
+				._button 
+					button(type="submit") 
+						span ok
+		._column
+			._form
+				span._close-btn
+					+iconfont('cancel', '_icon')
+				h2._title Оставить заявку
+				form(action="").request-form
+					._body
+						._line 
+							._input
+								input.input(id="name", autocomplete=" ", type="text", name="name", placeholder="Имя")
+						._line 
+							._input
+								input.input(id='phone', autocomplete=" ", type="text", name="phone", placeholder="Телефон")
+						._line
+							._input
+								input.input(id="email", autocomplete=" ", type="text", name="email", placeholder="Почта")
+						._line 
+							button(type="submit")._button
+								span отправить 
+				._text Нажимая на&nbsp;кнопку, вы даете согласие на&nbsp;обработку персональных данных
+		
+
+

@@ -1,0 +1,49 @@
+.request-page {
+	// .request-page__content
+
+	&__content {
+		border: 1px solid blue;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	// .request-page__body
+	&__body {
+	}
+
+	// .request-form__form
+	&__form {
+		position: relative;
+		padding: 99px 94px;
+		max-width: 730px;
+		border-radius: 30px;
+		background: $color;
+	}
+
+	// .request-page__info
+	&__info {
+		color: $bg-color;
+		font-size: 25px;
+		font-weight: 400;
+		line-height: 120%; /* 30px/25 */
+		text-align: center;
+	}
+}
+
+.request-form {
+	// .request-form__body
+	&__body {
+	}
+
+	// .request-form__line
+	&__line {
+	}
+
+	// .request-form__lebel
+	&__lebel {
+	}
+
+	// .request-form__input
+	&__input {
+	}
+}
