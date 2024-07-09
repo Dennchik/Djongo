@@ -13,18 +13,9 @@
 	// .request-page__body
 	&__body {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
 		width: 100%;
-		gap: 3rem;
 		margin: 50px 0;
-
-		@include _screen-1140 {
-			flex-direction: column-reverse;
-		}
-	}
-
-	// .request-page__column
-	&__column {
 	}
 
 	// .request-page__form
@@ -193,8 +184,9 @@
 	}
 }
 .show-cookie {
-	// display: block;
-	&._hide {
-		display: none;
-	}
+	position: absolute;
+	top: 50px;
+	right: 30px;
+	z-index: 999;
+	display: none;
 }

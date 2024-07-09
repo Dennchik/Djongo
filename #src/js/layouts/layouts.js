@@ -1,13 +1,7 @@
-
-// -----------------------------------------------------------------------------
-
-
-
 export function modalRequest() {
 	const buttonRequests = document.querySelectorAll('.ordeer-button');
 	const requestPage = document.querySelector('.page__request');
 	const closeButton = document.querySelector('.request-page__close-btn');
-	const showCookie = document.querySelector('.show-cookie');
 	buttonRequests.forEach(buttonRequest => {
 		buttonRequest.addEventListener('click', (e) => {
 			requestPage.classList.add('_show');
@@ -15,13 +9,27 @@ export function modalRequest() {
 		});
 		//* ------------------------------------------------------------------------
 
+		closeButton.addEventListener('click', () => {
+			requestPage.classList.remove('_show');
+			document.body.classList.remove('no-scroll');
+		});
 	});
-	showCookie.addEventListener('click', () => {
-		showCookie.classList.add('_hide');
+
+
+}
+
+export function showCookie() {
+	document.addEventListener('DOMContentLoaded', function () {
+		setTimeout(function () {
+			const cookieBanner = document.querySelector('.show-cookie');
+			cookieBanner.style.display = 'block';
+
+			const closeButton = cookieBanner.querySelector('button');
+			closeButton.addEventListener('click', function () {
+				cookieBanner.style.display = 'none';
+			});
+		}, 4000); // 20000 миллисекунд = 20 секунд
 	});
-	closeButton.addEventListener('click', () => {
-		requestPage.classList.remove('_show');
-		document.body.classList.remove('no-scroll');
-	});
+
 
 }
