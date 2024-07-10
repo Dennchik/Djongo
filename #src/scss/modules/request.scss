@@ -85,53 +85,6 @@
 	}
 }
 
-.info {
-	padding: 40px 30px;
-	max-width: 485px;
-	border-radius: 30px;
-	background: $bg-color;
-
-	@include _screen-1140 {
-		max-width: 730px;
-	}
-
-	// .info__title
-	&__title {
-		font-size: 25px;
-		font-weight: 400;
-		line-height: 120%; /* 30px/25 */
-		letter-spacing: 0%;
-		margin-bottom: 13px;
-	}
-
-	// .info__text
-	&__text {
-		font-size: 16px;
-		font-weight: 400;
-		line-height: 118.75%; /* 19px/16 */
-		margin-bottom: 27px;
-	}
-
-	// .info__button
-	&__button {
-		display: flex;
-		justify-content: flex-start;
-
-		button {
-			border-radius: 10px;
-			background: $color;
-			padding: 13px 50px;
-
-			color: $bg-color;
-			font-size: 18px;
-			font-weight: 400;
-			line-height: 122.222222%; /* 22px/18 */
-			text-align: center;
-			text-transform: uppercase;
-		}
-	}
-}
-
 .request-form {
 	// .request-form__body
 	&__body {
@@ -183,10 +136,70 @@
 		text-align: center;
 	}
 }
+
 .show-cookie {
-	position: absolute;
-	top: 50px;
-	right: 30px;
-	z-index: 999;
-	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: -1;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.5s ease-in-out;
+
+	@include _screen-490 {
+		bottom: 10px;
+		right: 10px;
+		left: 10px;
+	}
+
+	&._show {
+		pointer-events: all;
+		z-index: 999;
+		opacity: 1;
+	}
+
+	&__info {
+		overflow: hidden;
+		border-radius: 30px;
+		box-shadow: 1px 1px 15px #000;
+		max-width: 485px;
+
+		padding: 40px 30px;
+		background: #cccccc;
+	}
+	// .info__title
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 400;
+		line-height: 120%; /* 30px/25 */
+		letter-spacing: 0%;
+		margin-bottom: 13px;
+	}
+
+	// .info__text
+	&__text {
+		font-size: 1.6rem;
+		font-weight: 400;
+		line-height: 118.75%; /* 19px/16 */
+		margin-bottom: 27px;
+	}
+
+	// .info__button
+	&__button {
+		display: flex;
+		justify-content: flex-start;
+
+		button {
+			border-radius: 10px;
+			background: $color;
+			padding: 13px 50px;
+
+			color: $bg-color;
+			font-size: 1.8rem;
+			font-weight: 400;
+			line-height: 122.222222%; /* 22px/18 */
+			text-align: center;
+			text-transform: uppercase;
+		}
+	}
 }

@@ -22,11 +22,11 @@ export function showCookie() {
 	document.addEventListener('DOMContentLoaded', function () {
 		setTimeout(function () {
 			const cookieBanner = document.querySelector('.show-cookie');
-			cookieBanner.style.display = 'block';
+			cookieBanner.classList.add('_show');
 
 			const closeButton = cookieBanner.querySelector('button');
 			closeButton.addEventListener('click', function () {
-				cookieBanner.style.display = 'none';
+				cookieBanner.classList.remove('_show');
 			});
 		}, 4000); // 20000 миллисекунд = 20 секунд
 	});
